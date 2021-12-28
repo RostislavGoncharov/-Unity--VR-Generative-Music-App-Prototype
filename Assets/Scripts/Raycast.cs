@@ -6,8 +6,10 @@ public class Raycast : MonoBehaviour
 {
 
     RaycastHit hit;
-    public Transform ground;
-  
+    [SerializeField] private Transform ground;
+    [SerializeField] private GameObject speakerPrefab;
+
+    private GameObject suggestedPrefab;
 
     void Update()
     {
@@ -17,8 +19,9 @@ public class Raycast : MonoBehaviour
 
             if (hit.transform == ground)
             {
-                Debug.Log("This is ground");
+                //Instatntiate the prefab
             }
+
         } 
     }
 }
