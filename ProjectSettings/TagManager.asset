@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Socket
   - Ground
+  - Speaker
   layers:
   - Default
   - TransparentFX

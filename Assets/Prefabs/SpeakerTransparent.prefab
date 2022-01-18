@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8452294844699182821}
   - component: {fileID: 8452294844699182818}
   - component: {fileID: 8452294844699182819}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SpeakerTransparent
   m_TagString: Untagged
   m_Icon: {fileID: 0}

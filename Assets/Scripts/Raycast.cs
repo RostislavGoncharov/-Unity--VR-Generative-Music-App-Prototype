@@ -11,6 +11,7 @@ public class Raycast : MonoBehaviour
     [SerializeField] private GameObject speakerTransparent;
 
     private GameObject suggestedPrefab = null;
+    private Vector3 previousHitPoint = new Vector3(0, 0, 0);
 
     bool readyToPlaceSpeaker = false;
     bool collidingWithSpeaker = false;
@@ -22,17 +23,27 @@ public class Raycast : MonoBehaviour
 
             if (hit.transform == ground)
             {
-                if (suggestedPrefab != null)
+                if (hit.point == previousHitPoint)
                 {
-                    Destroy(suggestedPrefab);                   
+                    return;
                 }
-                suggestedPrefab = Instantiate(speakerTransparent, hit.point, Quaternion.identity);
-                readyToPlaceSpeaker = true;
+                
+                else
+                {
+                    previousHitPoint = hit.point;
 
+                    if (suggestedPrefab != null)
+                    {
+                        Destroy(suggestedPrefab);
+                    }
+                    suggestedPrefab = Instantiate(speakerTransparent, hit.point, Quaternion.identity);
+                    readyToPlaceSpeaker = true;
+                }
             }
 
             else
             {
+                previousHitPoint = Vector3.zero;
                 readyToPlaceSpeaker = false;
                 if (suggestedPrefab != null)
                 {
