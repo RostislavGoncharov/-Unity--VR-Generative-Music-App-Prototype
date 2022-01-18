@@ -2423,6 +2423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ground: {fileID: 30160373}
   speakerPrefab: {fileID: 8452294844699182817, guid: 90cb2dc698354124abaf9abba0c2cc4e, type: 3}
+  speakerTransparent: {fileID: 8452294844699182817, guid: a8ca96b7c9c3cca41a505d46102d477b, type: 3}
 --- !u!1 &1678590120
 GameObject:
   m_ObjectHideFlags: 0
