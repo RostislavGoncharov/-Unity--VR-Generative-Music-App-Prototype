@@ -24,11 +24,11 @@ public class Raycast : MonoBehaviour
             {
                 if (suggestedPrefab != null)
                 {
-                    Destroy(suggestedPrefab);
-                    suggestedPrefab = Instantiate(speakerTransparent, hit.point, Quaternion.identity);
-                    readyToPlaceSpeaker = true;
+                    Destroy(suggestedPrefab);                   
                 }
-                
+                suggestedPrefab = Instantiate(speakerTransparent, hit.point, Quaternion.identity);
+                readyToPlaceSpeaker = true;
+
             }
 
             else
