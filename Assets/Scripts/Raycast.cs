@@ -14,7 +14,6 @@ public class Raycast : MonoBehaviour
     private Vector3 previousHitPoint = new Vector3(0, 0, 0);
 
     bool readyToPlaceSpeaker = false;
-    bool collidingWithSpeaker = false;
 
     void Update()
     {
@@ -56,7 +55,7 @@ public class Raycast : MonoBehaviour
 
     public void PlaceSpeaker()
     {
-        if (readyToPlaceSpeaker && !collidingWithSpeaker)
+        if (readyToPlaceSpeaker)
         {
             Instantiate(speakerPrefab, suggestedPrefab.transform.position, Quaternion.identity);
             Debug.Log("speaker placed");
